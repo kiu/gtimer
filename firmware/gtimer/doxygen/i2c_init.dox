@@ -1,0 +1,56 @@
+/**
+\addtogroup doc_driver_i2c_init
+ 
+\brief Driver for I2C Initialisation
+
+The **I2C Init** driver initializes the I2C according
+to the user's data entry in START.
+
+
+\section doc_driver_i2c_init_configuration Driver Configuration
+
+The I2C Init driver is configured using START. The user can 
+select master or slave mode, desired SCL clock frequency, 
+I/O pin mapping etc.
+
+If several I2C hardware instances are available on the device, 
+the user can select which I2C instance the driver shall use.
+
+
+\section doc_driver_i2c_init_functional Functional Description
+
+The Init driver supplies only one function, the init()-function
+automatically called by a call to atmel_start_init() in main().
+
+
+\section doc_driver_i2c_init_hardware Hardware Dependencies
+
+The I2C Init driver uses some sort of hardware that implements 
+I2C functionality.
+
+Different MCUs have I2C hardware with different names and 
+functionalities, such as TWI, USI etc. In START, the user 
+selects a device and adds the I2C Init driver. A device
+may have several possible hardware resources available for 
+the driver, such as TWI0, TWI1 etc. In this case the user 
+must select which one to use.
+
+The configuration options in START displays options that are 
+dependent on the hardware used to implement the I2C driver.
+For example, an option may allow changing the SCL frequency 
+of the underlying I2C hardware.
+
+
+\section doc_driver_i2c_init_software Software Dependencies
+
+If configuring the Init driver to have the I2C generate interrupts,
+make sure that global interrupts are enabled (using sei()) and 
+that the Interrupt Controller, if present, is configured so that 
+any interrupts are serviced correctly.
+
+
+\section doc_driver_i2c_init_code Code example
+
+Not applicable for init drivers.
+
+*/
