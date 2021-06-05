@@ -1168,7 +1168,7 @@ uint8_t TWIGetStatus(void) {
      62c:	58 f4       	brcc	.+22     	; 0x644 <__vector_11+0x19a>
      62e:	90 91 fa 02 	lds	r25, 0x02FA	; 0x8002fa <t_hour>
      632:	9f 30       	cpi	r25, 0x0F	; 15
-     634:	39 f4       	brne	.+14     	; 0x644 <__vector_11+0x19a>
+     634:	21 f0       	breq	.+8      	; 0x63e <__vector_11+0x194>
      636:	90 91 fa 02 	lds	r25, 0x02FA	; 0x8002fa <t_hour>
      63a:	95 31       	cpi	r25, 0x15	; 21
      63c:	19 f4       	brne	.+6      	; 0x644 <__vector_11+0x19a>
@@ -1180,10 +1180,10 @@ uint8_t TWIGetStatus(void) {
      64a:	78 f4       	brcc	.+30     	; 0x66a <__vector_11+0x1c0>
      64c:	90 91 fa 02 	lds	r25, 0x02FA	; 0x8002fa <t_hour>
      650:	9f 30       	cpi	r25, 0x0F	; 15
-     652:	59 f4       	brne	.+22     	; 0x66a <__vector_11+0x1c0>
+     652:	41 f0       	breq	.+16     	; 0x664 <__vector_11+0x1ba>
      654:	90 91 fa 02 	lds	r25, 0x02FA	; 0x8002fa <t_hour>
      658:	92 31       	cpi	r25, 0x12	; 18
-     65a:	39 f4       	brne	.+14     	; 0x66a <__vector_11+0x1c0>
+     65a:	21 f0       	breq	.+8      	; 0x664 <__vector_11+0x1ba>
      65c:	90 91 fa 02 	lds	r25, 0x02FA	; 0x8002fa <t_hour>
      660:	95 31       	cpi	r25, 0x15	; 21
      662:	19 f4       	brne	.+6      	; 0x66a <__vector_11+0x1c0>
@@ -1193,10 +1193,10 @@ uint8_t TWIGetStatus(void) {
      66c:	78 f0       	brcs	.+30     	; 0x68c <__vector_11+0x1e2>
      66e:	80 91 fa 02 	lds	r24, 0x02FA	; 0x8002fa <t_hour>
      672:	8f 30       	cpi	r24, 0x0F	; 15
-     674:	59 f4       	brne	.+22     	; 0x68c <__vector_11+0x1e2>
+     674:	41 f0       	breq	.+16     	; 0x686 <__vector_11+0x1dc>
      676:	80 91 fa 02 	lds	r24, 0x02FA	; 0x8002fa <t_hour>
      67a:	82 31       	cpi	r24, 0x12	; 18
-     67c:	39 f4       	brne	.+14     	; 0x68c <__vector_11+0x1e2>
+     67c:	21 f0       	breq	.+8      	; 0x686 <__vector_11+0x1dc>
      67e:	80 91 fa 02 	lds	r24, 0x02FA	; 0x8002fa <t_hour>
      682:	85 31       	cpi	r24, 0x15	; 21
      684:	19 f4       	brne	.+6      	; 0x68c <__vector_11+0x1e2>

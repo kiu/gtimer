@@ -83,20 +83,20 @@ ISR(TIMER1_COMPA_vect) {
 	}
 		
 	if (t_minute == 0 && t_second == 0 && pump_mode == IDLE) {
-		if (tempMax <= 22					&& t_hour == 15) {
+		if (tempMax <= 22					&& ( t_hour == 15 ) ) {
 			pump_mode_next = START;			
 		}
-		if (tempMax > 22 && tempMax <=26	&& t_hour == 15 && t_hour == 21) {
+		if (tempMax > 22 && tempMax <=26	&& ( t_hour == 15 || t_hour == 21) ) {
 			pump_mode_next = START;
 		}		
-		if (tempMax > 26 && tempMax <=30	&& t_hour == 15 && t_hour == 18 && t_hour == 21) {			
+		if (tempMax > 26 && tempMax <=30	&& ( t_hour == 15 || t_hour == 18 || t_hour == 21 ) ) {			
 			pump_mode_next = START;
 		}		
-		if (tempMax > 30					&& t_hour == 15 && t_hour == 18 && t_hour == 21) {
+		if (tempMax > 30					&& ( t_hour == 15 || t_hour == 18 || t_hour == 21 ) ) {
 			pump_mode_next = START;
 		}
 		
-		if (tempMaxLast > 30				&& t_hour == 9) {
+		if (tempMaxLast > 30				&& ( t_hour == 9 ) ) {
 			pump_mode_next = START;	
 		}
 	}
