@@ -12,7 +12,7 @@
 #define SETRTC 0
 #define SETRTC_OFFSET 4
 
-#define SETEEPROM 0
+#define WIPEEEPROM 0
 
 #define HUMIDITY_ALARM_THRESHOLD 90
 

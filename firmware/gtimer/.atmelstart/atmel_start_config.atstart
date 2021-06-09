@@ -119,7 +119,7 @@ drivers:
       domain_group: null
   TIMER_0:
     user_label: TIMER_0
-    definition: Atmel:ATMega328PB_drivers:1.0.0::ATmega328PB-AU::TC1::driver_config_definition::TC16.Mode.12.CTC::Drivers:TC16:Init
+    definition: Atmel:ATMega328PB_drivers:1.0.0::ATmega328PB-AU::TC1::driver_config_definition::TC16.Mode.4.CTC::Drivers:TC16:Init
     functionality: Timer
     api: Drivers:TC16:Init
     configuration:
@@ -130,10 +130,10 @@ drivers:
       tc16_ices: Falling edge will trigger input capture
       tc16_icie: false
       tc16_icnc: false
-      tc16_icr: 7812
+      tc16_icr: 0
       tc16_ociea: true
       tc16_ocieb: false
-      tc16_orca: 7812
+      tc16_orca: 7730
       tc16_orcb: 0
       tc16_psrasy: false
       tc16_psrsync: false
@@ -252,19 +252,19 @@ pads:
     configuration: null
 toolchain_options:
 - definition:
-    identifier: Atmel:ATMega328PB_drivers:1.0.0::ATmega328PB-AU::environment_definition::All:Microchip.Studio.gcc:7.0.0
-  configuration:
-    compiler_config:
-      avrgcc_compiler_miscellaneous_OtherFlags: -std=gnu99
-    linker_config:
-      avrgcc_linker_miscellaneous_LinkerFlags: ''
-- definition:
     identifier: Atmel:ATMega328PB_drivers:1.0.0::ATmega328PB-AU::environment_definition::All:Microchip.Studio.xc8:7.0.0
   configuration:
     compiler_config:
       xc8_compiler_miscellaneous_OtherFlags: -std=gnu99
     linker_config:
       xc8_linker_miscellaneous_LinkerFlags: ''
+- definition:
+    identifier: Atmel:ATMega328PB_drivers:1.0.0::ATmega328PB-AU::environment_definition::All:Microchip.Studio.gcc:7.0.0
+  configuration:
+    compiler_config:
+      avrgcc_compiler_miscellaneous_OtherFlags: -std=gnu99
+    linker_config:
+      avrgcc_linker_miscellaneous_LinkerFlags: ''
 - definition:
     identifier: Atmel:ATMega328PB_drivers:1.0.0::ATmega328PB-AU::environment_definition::All:Atmel.Studio:7.0.0
   configuration:

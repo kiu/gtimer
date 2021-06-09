@@ -47,16 +47,16 @@ int8_t TIMER_0_init()
 
 	// TCCR1A = (0 << COM1A1) | (0 << COM1A0) /* Normal port operation, OCA disconnected */
 	//		 | (0 << COM1B1) | (0 << COM1B0) /* Normal port operation, OCB disconnected */
-	//		 | (0 << WGM11) | (0 << WGM10); /* TC16 Mode 12 CTC */
+	//		 | (0 << WGM11) | (0 << WGM10); /* TC16 Mode 4 CTC */
 
-	TCCR1B = (1 << WGM13) | (1 << WGM12)                /* TC16 Mode 12 CTC */
+	TCCR1B = (0 << WGM13) | (1 << WGM12)                /* TC16 Mode 4 CTC */
 	         | 0 << ICNC1                               /* Input Capture Noise Canceler: disabled */
 	         | 0 << ICES1                               /* Input Capture Edge Select: disabled */
 	         | (1 << CS12) | (0 << CS11) | (1 << CS10); /* IO clock divided by 1024 */
 
-	ICR1 = 0x1e84; /* Top counter value: 0x1e84 */
+	// ICR1 = 0x0; /* Input capture value, used as top counter value in some modes: 0x0 */
 
-	OCR1A = 0x1e84; /* Output compare A: 0x1e84 */
+	OCR1A = 0x1e32; /* Output compare A: 0x1e32 */
 
 	// OCR1B = 0x0; /* Output compare B: 0x0 */
 

@@ -71,7 +71,7 @@
           <AcmeProjectActionInfo Action="File" Source="include/usart_basic.h" IsConfig="false" Hash="bBq9+mewAtqCvWAB2AbRjQ" />
           <AcmeProjectActionInfo Action="File" Source="src/nvmctrl_basic.c" IsConfig="false" Hash="3vNpJPGOTMmL5qIHd0KaJg" />
           <AcmeProjectActionInfo Action="File" Source="src/protected_io.S" IsConfig="false" Hash="sTkan98Jx/L5evUxlZFkAA" />
-          <AcmeProjectActionInfo Action="File" Source="src/tc16.c" IsConfig="false" Hash="HqcJMbiejDe0kb+ZymjS/A" />
+          <AcmeProjectActionInfo Action="File" Source="src/tc16.c" IsConfig="false" Hash="KHEGv/ftKmu3NwhSpD+vGQ" />
           <AcmeProjectActionInfo Action="File" Source="src/twi.c" IsConfig="false" Hash="y+Wt/a0cBS4eS+Rnp669Pg" />
           <AcmeProjectActionInfo Action="File" Source="src/usart_basic.c" IsConfig="false" Hash="ez1M8BFPdx035LYWfCSRqQ" />
           <AcmeProjectActionInfo Action="File" Source="utils/assembler.h" IsConfig="false" Hash="jaaWqpCXnRJMciuXpjSfgQ" />
